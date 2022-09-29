@@ -1,0 +1,150 @@
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100%;
+
+    font-family: 'Oswald';
+
+    color: #DDDDDD;
+    
+    background-image: url(/images/unicorn-background.png);
+    background-attachment: fixed;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+
+    color: #ffffff;
+    background-color: #222831;
+
+    z-index: 1;
+    box-shadow: 0px 5px 10px #000000;
+}
+
+.header-container {
+    width: 90%;
+
+    display: grid;
+    grid-template-columns: 2fr 1.5fr;
+    column-gap: 1rem;
+}
+
+/* !Animation */
+.animated {
+    transition: 0.5s;
+}
+
+.animated:hover {
+    z-index: 1;
+    transform: scale(1.2);
+}
+
+.heading {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: inherit;
+}
+
+h1 span, h2 span {
+    color: #FD919E;
+}
+
+.heading h1 {
+    text-decoration: none;
+}
+
+#primary-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+#primary-nav a {
+    color: unset;
+    text-decoration: none;
+
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid rgba(0, 0, 0, 0);
+}
+
+#primary-nav a:hover {
+    box-shadow: 2px 5px 10px #000000;
+
+    border-color: #FD919E;
+    background-color: #222831;
+}
+
+main {
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+
+    flex: 1 0 auto; /* For correct footer position */
+}
+
+main > article {
+    max-width: 70%;
+
+    background-color: #30475E;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+
+    gap: 5em;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+main section:nth-child(even) .content-container {
+    flex-direction: row-reverse;
+}
+
+.text-container {
+    max-width: 40%;
+}
+
+.content-container > img {
+    width: 200px;
+    height: 200px;
+}
+
+footer {
+    flex: 0 0 auto;
+
+    display: flex;
+    justify-content: center;
+
+    color: #DDDDDD;
+    background-color: #000000;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url(/fonts/Oswald/Oswald-VariableFont_wght.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
